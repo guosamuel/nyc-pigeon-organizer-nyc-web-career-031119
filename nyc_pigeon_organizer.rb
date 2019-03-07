@@ -17,6 +17,7 @@ def nyc_pigeon_organizer(data)
 			d.each do |e, f|
 				if f.include?(name)
 				  if e.is_a? Symbol 
+<<<<<<< HEAD
 				    if !pigeon_list[name]
 				      # binding.pry
 					    pigeon_list[name] = {c => [e.id2name]}
@@ -29,6 +30,15 @@ def nyc_pigeon_organizer(data)
 					  end
 					else
 					 # pigeon_list[name][c].push(e)
+=======
+				    if pigeon_list.empty?
+					    pigeon_list[name] = {c => [e.id2name]}
+					  else
+					    binding.pry
+					    pigeon_list[name].merge!({c => [e.id2name]})
+					  end
+					else
+>>>>>>> 5603fac04f3f3175ed80d3448536bf2be980ef37
 					  pigeon_list[name].merge!({c => [e]})
 					end
 				end
